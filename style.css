@@ -148,7 +148,8 @@ body {
   background: #10b15a;
   color: white;
   text-align: center;
-  padding: 20;
+  padding: 35px 20px;   /* increased height */
+  font-size: 18px;
 }
 
 /* Mobile */
