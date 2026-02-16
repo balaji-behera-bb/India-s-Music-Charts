@@ -58,43 +58,45 @@ songs.forEach((song, index) => {
 
   const card = document.createElement("div");
   card.className = "chart-card";
+  card.id = `card-${position}`;
 
-  const imgURL = `https://itunes.apple.com/search?term=${encodeURIComponent(song.title + " " + song.artist)}&limit=1`;
+  card.innerHTML = `
+    <div class="card-left">
+      <div class="rank">${position}</div>
+      <img class="cover" id="cover-${position}" src="https://via.placeholder.com/60">
+      <div class="song-info">
+        <div class="song-title">${song.title}</div>
+        <div>${song.artist}</div>
+      </div>
+    </div>
+    <div class="stats">
+      NEW<br>
+      Peak: ${position}<br>
+      Weeks: 1
+    </div>
+  `;
 
-  fetch(imgURL)
+  chart.appendChild(card);
+
+  // Fetch artwork
+  const url = `https://itunes.apple.com/search?term=${encodeURIComponent(song.title + " " + song.artist)}&limit=1`;
+
+  fetch(url)
     .then(res => res.json())
     .then(data => {
-      const artwork = data.results[0]?.artworkUrl100 || "https://via.placeholder.com/60";
-      buildCard(artwork);
-    })
-    .catch(() => buildCard("https://via.placeholder.com/60"));
+      const artwork = data.results[0]?.artworkUrl100;
+      if (artwork) {
+        document.getElementById(`cover-${position}`).src = artwork;
 
-  function buildCard(artwork) {
-    card.innerHTML = `
-      <div class="card-left">
-        <div class="rank">${position}</div>
-        <img class="cover" src="${artwork}">
-        <div class="song-info">
-          <div class="song-title">${song.title}</div>
-          <div>${song.artist}</div>
-        </div>
-      </div>
-      <div class="stats">
-        NEW<br>
-        Peak: ${position}<br>
-        Weeks: 1
-      </div>
-    `;
-    chart.appendChild(card);
+        if (position === 1) {
+          document.getElementById("topSongTitle").textContent = song.title;
+          document.getElementById("topSongArtist").textContent = song.artist;
+          document.getElementById("topSongImg").src = artwork;
 
-    if (position === 1) {
-      document.getElementById("topSongTitle").textContent = song.title;
-      document.getElementById("topSongArtist").textContent = song.artist;
-      document.getElementById("topSongImg").src = artwork;
-
-      document.getElementById("gainerTitle").textContent = song.title;
-      document.getElementById("gainerArtist").textContent = song.artist;
-      document.getElementById("gainerImg").src = artwork;
-    }
-  }
+          document.getElementById("gainerTitle").textContent = song.title;
+          document.getElementById("gainerArtist").textContent = song.artist;
+          document.getElementById("gainerImg").src = artwork;
+        }
+      }
+    });
 });
