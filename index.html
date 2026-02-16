@@ -2,69 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>India Music Charts</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <div class="logo">IM Charts</div>
-</header>
+  <!-- Top Header -->
+  <header class="top-header">
+    <h1>India Music Charts</h1>
+  </header>
 
-<!-- Top Widgets -->
-<section class="top-widgets">
-  <div class="widget">
-    <h3>This week’s #1!</h3>
-    <p class="song">Cruel Summer</p>
-    <p class="artist">Taylor Swift</p>
-  </div>
+  <!-- Title Band -->
+  <section class="title-band">
+    <h2>Top 50 Songs Chart</h2>
+  </section>
 
-  <div class="widget">
-    <h3>Biggest Gainer</h3>
-    <p class="song">Cruel Summer</p>
-    <p class="artist">Taylor Swift</p>
-  </div>
-</section>
+  <!-- Highlight Strip -->
+  <section class="highlight-strip">
+    <div class="highlight-card" id="topSong">
+      <h3>This week’s #1!</h3>
+      <div class="highlight-content">
+        <img id="topSongImg" />
+        <div>
+          <p id="topSongTitle"></p>
+          <p id="topSongArtist"></p>
+        </div>
+      </div>
+    </div>
 
-<!-- Main Title -->
-<section class="title">
-  <h1>India Music Charts</h1>
-</section>
+    <div class="highlight-card" id="biggestGainer">
+      <h3>This week’s biggest gainer!</h3>
+      <div class="highlight-content">
+        <img id="gainerImg" />
+        <div>
+          <p id="gainerTitle"></p>
+          <p id="gainerArtist"></p>
+        </div>
+      </div>
+    </div>
 
-<!-- News + Ads -->
-<section class="news-section">
-  <div class="news-card">
-    <h2>What’s HOT with IM Charts!</h2>
-    <p>
-      Arijit Singh drops his first album after retirement from playback
-      singing. Check out full story here.
-    </p>
-  </div>
+    <div class="highlight-card news-card">
+      <h3>What’s HOT with IM Charts!</h3>
+      <div class="highlight-content">
+        <img src="https://via.placeholder.com/80" />
+        <p>
+          Arijit Singh drops his first album after retirement from playback
+          singing. Check out full story here:
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <div class="ad">Ad Space</div>
-  <div class="ad">Ad Space</div>
-</section>
+  <!-- Main Chart Area -->
+  <main class="main-layout">
+    <div class="chart-container" id="chartList"></div>
 
-<!-- Top Songs -->
-<section class="songs-section">
-  <h2>Top 50 Songs Chart</h2>
-  <div id="chartContainer"></div>
-</section>
+    <aside class="ad-column">
+      <p>Space left for advertisements</p>
+    </aside>
+  </main>
 
-<!-- Other Charts -->
-<section class="other-charts">
-  <div class="chart-box">Top 50 Albums</div>
-  <div class="chart-box">Top 50 Artists</div>
-  <div class="chart-box">Year-End Artists</div>
-  <div class="chart-box">Year-End Albums</div>
-  <div class="chart-box">Top 50 Bhajan</div>
-</section>
+  <!-- Explore Section -->
+  <section class="explore-strip">
+    <h3>Explore more of IM Charts</h3>
+    <div class="explore-buttons">
+      <div class="explore-btn">Top 50 Albums Chart</div>
+      <div class="explore-btn">Top 50 Artists Chart</div>
+      <div class="explore-btn">2025: Year End Albums Charts</div>
+      <div class="explore-btn">2025: Year End Artists Charts</div>
+      <div class="explore-btn">Top 50 Bhajan Charts</div>
+      <div class="arrow-btn">→</div>
+    </div>
+  </section>
 
-<footer>
-  India Music Charts. Founded by Balaji Behera
-</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    India Music Charts. Founded by Balaji Behera
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
