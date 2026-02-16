@@ -1,141 +1,171 @@
 body {
   margin: 0;
   font-family: "Century Gothic", Arial, sans-serif;
-  background: white;
-  color: black;
+  background: #f2f2f2;
 }
 
-header {
-  background: #1ca9c9;
+/* Header */
+.top-header {
+  background: #10b15a;
   color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  padding: 20px 30px;
+  font-size: 28px;
 }
 
-/* Top widgets */
-.top-widgets {
+/* Title band */
+.title-band {
+  background: #7ed957;
+  padding: 20px 30px;
+}
+
+.title-band h2 {
+  margin: 0;
+  font-size: 48px;
+}
+
+/* Highlight strip */
+.highlight-strip {
+  background: #c85a72;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
-  background: #e9f8fc;
-}
-
-.widget {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 220px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.song {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.artist {
-  color: gray;
-}
-
-/* Title */
-.title {
-  text-align: center;
-  padding: 20px;
-}
-
-.title h1 {
-  font-size: 42px;
-}
-
-/* News + Ads */
-.news-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
 }
 
-.news-card {
-  background: #f7f7f7;
-  padding: 20px;
-  border-radius: 12px;
+.highlight-card {
+  background: black;
+  color: white;
+  padding: 15px;
+  flex: 1;
 }
 
-.ad {
-  background: #ddd;
-  border-radius: 12px;
+.highlight-card h3 {
+  margin-top: 0;
+}
+
+.highlight-content {
   display: flex;
+  gap: 15px;
   align-items: center;
-  justify-content: center;
-  font-weight: bold;
 }
 
-/* Songs */
-.songs-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+.highlight-content img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
+/* Main layout */
+.main-layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.chart-container {
+  flex: 1;
+}
+
+/* Chart cards */
 .chart-card {
-  display: flex;
-  align-items: center;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.position {
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rank {
   font-size: 24px;
-  font-weight: bold;
-  width: 50px;
+  width: 30px;
 }
 
 .cover {
   width: 60px;
   height: 60px;
-  border-radius: 8px;
-  margin-right: 15px;
+  object-fit: cover;
 }
 
 .song-info {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-weight: bold;
 }
 
 .stats {
   text-align: right;
+  font-size: 14px;
 }
 
-.up { color: green; }
-.down { color: red; }
-
-/* Other charts */
-.other-charts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 40px;
-}
-
-.chart-box {
-  background: #1ca9c9;
+/* Ad column */
+.ad-column {
+  width: 260px;
+  background: black;
   color: white;
-  padding: 25px;
-  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
+}
+
+/* Explore strip */
+.explore-strip {
+  background: #c85a72;
+  padding: 20px;
+}
+
+.explore-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.explore-btn {
+  background: #7ed957;
+  padding: 15px;
   font-weight: bold;
 }
 
+.arrow-btn {
+  background: #ddd;
+  padding: 15px;
+  font-size: 20px;
+}
+
 /* Footer */
-footer {
-  margin-top: 40px;
-  padding: 20px;
-  border-top: 5px solid green;
+.footer {
+  background: #10b15a;
+  color: white;
   text-align: center;
+  padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .ad-column {
+    display: none;
+  }
+
+  .highlight-strip {
+    flex-direction: column;
+  }
+
+  .explore-buttons {
+    flex-direction: column;
+  }
 }
