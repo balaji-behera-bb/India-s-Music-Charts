@@ -3,46 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>India's Music Charts</title>
+  <title>India Music Charts</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <div class="logo">IM Charts</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#songs">Songs</a>
-    <a href="#about">About</a>
-  </nav>
 </header>
 
-<section class="hero" id="home">
-  <h1>India's Music Charts</h1>
-  <div class="widgets">
-    <div class="widget" id="topSongWidget">
-      <strong>#1 Song This Week</strong>
-      <p id="topSongText">Loading…</p>
-    </div>
-    <div class="widget">
-      <strong>Biggest Gainer</strong>
-      <p>Update Weekly</p>
-    </div>
+<!-- Top Widgets -->
+<section class="top-widgets">
+  <div class="widget">
+    <h3>This week’s #1!</h3>
+    <p class="song">Cruel Summer</p>
+    <p class="artist">Taylor Swift</p>
+  </div>
+
+  <div class="widget">
+    <h3>Biggest Gainer</h3>
+    <p class="song">Cruel Summer</p>
+    <p class="artist">Taylor Swift</p>
   </div>
 </section>
 
-<section class="section" id="songs">
-  <h2>Top 50 Songs – YouTube India</h2>
+<!-- Main Title -->
+<section class="title">
+  <h1>India Music Charts</h1>
+</section>
+
+<!-- News + Ads -->
+<section class="news-section">
+  <div class="news-card">
+    <h2>What’s HOT with IM Charts!</h2>
+    <p>
+      Arijit Singh drops his first album after retirement from playback
+      singing. Check out full story here.
+    </p>
+  </div>
+
+  <div class="ad">Ad Space</div>
+  <div class="ad">Ad Space</div>
+</section>
+
+<!-- Top Songs -->
+<section class="songs-section">
+  <h2>Top 50 Songs Chart</h2>
   <div id="chartContainer"></div>
 </section>
 
-<section class="about" id="about">
-  <h3>About Us</h3>
-  <p>India's Music Charts is a weekly ranking of the most popular songs across streaming platforms.</p>
+<!-- Other Charts -->
+<section class="other-charts">
+  <div class="chart-box">Top 50 Albums</div>
+  <div class="chart-box">Top 50 Artists</div>
+  <div class="chart-box">Year-End Artists</div>
+  <div class="chart-box">Year-End Albums</div>
+  <div class="chart-box">Top 50 Bhajan</div>
 </section>
 
 <footer>
-  India's Music Charts – Founded by Balaji Behera
+  India Music Charts. Founded by Balaji Behera
 </footer>
 
 <script src="script.js"></script>
