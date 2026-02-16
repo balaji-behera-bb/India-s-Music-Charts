@@ -133,14 +133,14 @@ body {
 
 .explore-btn {
   background: #7ed957;
-  padding: 15px;
+  padding: 15;
   font-weight: bold;
 }
 
 .arrow-btn {
   background: #ddd;
-  padding: 15px;
-  font-size: 20px;
+  padding: 15;
+  font-size: 20;
 }
 
 /* Footer */
@@ -148,11 +148,11 @@ body {
   background: #10b15a;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20;
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 900) {
   .main-layout {
     flex-direction: column;
   }
